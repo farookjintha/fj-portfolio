@@ -4,8 +4,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 
-import Hero from './Home/Hero'
-import Skills from './Home/Skills'
+import Hero from './components/Home/Hero'
+import Skills from './components/Home/Skills'
 
 ReactDOM.render(
   <React.StrictMode>

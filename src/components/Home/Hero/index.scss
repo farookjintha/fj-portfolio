@@ -41,7 +41,7 @@ $welcome-section-color:#00203FFF;
   
   @font-face{
       font-family: 'MyFont';
-      src : local('MyFont'), url(../../assets/MyFont.ttf) format('truetype');
+      src : local('MyFont'), url(../../../assets/MyFont.ttf) format('truetype');
   }
   
   .head {
