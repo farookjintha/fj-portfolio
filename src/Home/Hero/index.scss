@@ -1,0 +1,261 @@
+$background-color:rgb(224, 247, 236);
+
+$welcome-section-color:#00203FFF;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200&display=swap');
+
+.particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: -14vh;
+    z-index: -1;
+    border-radius: 0px 0px 60px 60px;
+    transform: skewY(4deg);
+  }
+
+/* Fix/hack for 1080p+ displays */
+@media screen and (min-width: 1921px) {
+    .hero {
+      padding-bottom: 5px;
+      margin-bottom: 240px !important;
+    }
+  
+    .hero:after {
+      bottom: -220px !important;
+    }
+  }
+  
+  .hero1 {
+    background: $welcome-section-color;
+    color: black;
+    position: relative;
+    z-index: 1;
+    margin-top: -1px;
+    margin-bottom: 200px;
+    padding-top: 80px;
+  }
+  
+  @font-face{
+      font-family: 'MyFont';
+      src : local('MyFont'), url(../../assets/MyFont.ttf) format('truetype');
+  }
+  
+  .head {
+      color: #ADEFD1FF;
+      font-family: 'MyFont';
+      font-weight: bold;
+      text-align: center;
+      font-size: 12vw;
+      font-weight: 600;
+  }
+  
+  .hero1:after {
+    background: inherit;
+    content: "";
+    display: block;
+    height: 20vh;
+    border-radius: 0px 0px 60px 60px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(4deg);
+    transform-origin: 100%;
+    z-index: -2;
+    // box-shadow: 0px 20px 17px -9px rgba(0, 0, 0, 0.43);
+  }
+  
+  .hero1 h1 {
+    padding-top: 150px;
+    padding-bottom: 10px;
+    padding-right:20px;
+    padding-left:20px;
+    text-align: center;
+    font-size: calc(22px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  }
+
+
+  //Hexagons
+
+  /* ---- reset ---- */
+
+
+
+
+
+
+/* ---- particles.js container ---- */
+// p {
+//   display: inline-block;
+// }
+.text {
+  width: 70%;
+  text-align: center;
+  margin: 2em auto;
+  font-size: 1.515vw;
+  color: white;
+  font-family: 'Cairo', sans-serif;
+}
+.icons{
+  // position: absolute;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+.fa-kaggle:before {
+  font-family: 'Roboto', sans-serif;
+  color: transparent;
+  font-size: 1.1em;
+  content: "k";
+  margin: 0, 0.485vw;
+}
+
+.hexagon-wrapper {
+    width: 5.242vw;
+    height: 5.242vw;
+    display : inline-block;
+    position: relative;
+  }
+  .hexagon {
+    cursor : pointer;
+    position: relative;
+    width: 80%;
+    height: 46%;
+    background: linear-gradient(-180deg,  #ADEFD1FF, #5d82c7);
+    display: flex;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  .hexagon i {
+    z-index: 100;
+    padding: 0vw 0.485vw 0.485vw 0.485vw !important;
+    position: relative;
+    margin: 0 0.485vw;
+    font-size: 2.424vw;
+    color: transparent;
+    background: linear-gradient(45deg, #00203FFF, #00203FFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  .hexagon i:hover{
+    color: rgb(11, 69, 128);
+  }
+  .fa-kaggle:hover:before{
+    // z-index: 100;
+    color: rgb(11, 69, 128);
+  } 
+  .hexagon:before,
+  .hexagon:after {
+    position: absolute;
+    content: "";
+    background: inherit;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  .hexagon:before {
+    transform: rotateZ(60deg);
+  }
+  .hexagon:after {
+    transform: rotateZ(-60deg);
+  }
+  .hexagon:hover {
+    border-radius: 3.03vw;
+    transition: 0.5s;
+  }
+  .hexagon:hover:before {
+    border-radius: 3.03vw;
+    transition: 0.5s;
+  }
+  .hexagon:hover:after {
+    border-radius: 3.03vw;
+    transition: 0.5s;
+  }
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 10;
+    font-size: 11px;
+    /* background-color: red; */
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px){
+      #scene1{
+        margin-top: 2em;
+      }
+      ul {
+        padding: 0 !important;
+    }
+
+      .icons {
+        margin-top: 1em;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .head {
+        font-size: 20vw;
+    }
+    .text {
+        font-size: 3vw;
+        margin-top: 5vw !important;
+    }
+    .hexagon-wrapper {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        background: transparent;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        margin: 0px 0px !important;
+    }
+    .fa {
+        font-size: 1.5em !important;
+    }
+}
+
+@media screen and (max-width: 356px) {
+  .head {
+      font-size: 20vw;
+  }
+  .text {
+      font-size: 3vw;
+      margin-top: 5vw !important;
+  }
+  .icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .hexagon-wrapper {
+      display: inline-block;
+      width: 8vh;
+      height: 8vh;
+      position: relative;
+      background: transparent;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      margin: 0px 0px !important;
+  }
+  .fa {
+      font-size: 1.5em !important;
+  }
+}

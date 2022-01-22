@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200&display=swap');
+
+.skillsHeading{
+    margin: 8em auto 0 auto;
+    font-family: 'Raleway';
+    font-size: 5vh;
+    text-align: center;
+}
+
+.grids {
+    margin: 20vh 3vh;
+    // margin: calc(var(--size) * .5) auto 0;
+    // width: calc(var(--size) * calc(var(--Nhexa) - 1));
+      display: grid;
+      grid-template-columns: repeat(var(--Nhexa), 1fr);
+      grid-gap: var(--gap);
+      display:inline-grid;
+  }
+
+  article {
+    background: #00203FFF;
+    width: var(--size); 
+    height: calc(var(--size) / 1.1111111);
+      clip-path: url(#hexagono);
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+    margin-right: calc(var(--size) / 2);
+      color: #fff;
+      overflow: hidden;
+  }
+  article:nth-child(2n) {margin: calc(var(--size) * -.5) calc(var(--size) * -.25) 0 calc(var(--size) * -.75);}
+  article::before {
+      content: '';
+      float: left;
+      width: 25%;
+      height: 100%;
+      clip-path: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
+      shape-outside: polygon(0% 0%, 100% 0%, 0% 50%, 100% 100%, 0% 100%);
+  }
+
+  img {
+    width: var(--size);
+    height: var(--size);
+    // max-width: 50%;
+    // height: auto;
+    position: absolute;
+    padding: 6vh;
+    background-image: radial-gradient(circle, #f5f7f9, #d5ecfc, #ace2fd, #78d9fa, #02d0f3);
+    // background-image: radial-gradient(circle, #f5f7f9, #c5cfd7, #94aab4, #638691, #30646d);
+    // background-image: radial-gradient(circle, #f5f7f9, #def1fd, #c3ecfe, #a2e7fc, #7be3f5);
+    // background: linear-gradient(-180deg,  rgb(41, 157, 161), rgb(41, 157, 161));
+    background-size: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 0% 50%;
+    transition: .75s;
+    clip-path: url(#hexagono);
+    clip-path: inherit;
+    z-index:  10;
+  }
+  article:hover img {
+      transform: translate(-50%, -50%) rotate(-110deg);
+  }
+
+  figure {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	max-width: 50%;
+	height: 100%;
+	font-size: calc(9 / var(--Nhexa) * 1vw);
+	line-height: 1;
+	color: #fff;
+	transition: .75s .05s;
+       text-align: center;
+}
+h2 {font-size: 100%;}
+figure p {
+	font-size: 70%;
+	line-height: 1.2;
+	width: 100%;
+}
+body > p {
+	font-size: 1.5rem;
+	margin: 2rem 0 1rem calc(var(--size) * .5);
+	font-weight: 200;
+}
